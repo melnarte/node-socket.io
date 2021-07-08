@@ -12,6 +12,8 @@ const server = express()
 
 const io = socketIO(server);
 
+console.log('Waiting for client connection ... ');
+
 io.on('connection', (socket) => {
   console.log('Client connected');
   socket.on('disconnect', () => console.log('Client disconnected'));
